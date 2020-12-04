@@ -18,7 +18,7 @@ def hello_world():
     message = "It's Christmas!" 
   elif final < 0:
     message = "it's my birthday soon!"
-  return render_template("index.html" message=message)
+  return render_template("index.html", message=message)
 
 # the web address is https://code-playground.onrender.com/
 
