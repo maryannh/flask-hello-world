@@ -13,7 +13,7 @@ def hello_world():
   final = delta.days
   message = "fuck christmas"
   if final > 0:
-    message = "there are " + final + " days until Christmas"
+    message = "there are " + str(final) + " days until Christmas"
   elif final == 0:
     message = "It's Christmas!" 
   elif final < 0:
