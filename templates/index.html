@@ -1,12 +1,19 @@
 <html>
   <head>
+    <link rel="stylesheet" href="static/style.css">
   </head>
 
   <body>
     <h1>whatever</h1>
 
     {{ message }}
-    
+
+    <ul>
+    {% for item in my_list %}
+      <li>{{ item }}</li>
+    {% endfor %}
+    </ul>
+
   </body>
 
 </html>
