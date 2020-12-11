@@ -22,11 +22,6 @@ def hello_world():
 
   my_list = ['tikka t1X', 'tikka T3x', 'Lee Enfield', 'Mauser M96'] 
 
-  print(my_list(1))
-
-  list_item = my_list(1)
-
-  
 
   return render_template("index.html", message=message, my_list=my_list)
 
