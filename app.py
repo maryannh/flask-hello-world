@@ -28,6 +28,8 @@ def hello_world():
 
   nasa = r.json()
 
+  print(nasa)
+
   return render_template("index.html", message=message, my_list=my_list, nasa=nasa)
 
 # the web address is https://code-playground.onrender.com/
