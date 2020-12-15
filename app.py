@@ -1,5 +1,7 @@
 from flask import Flask, render_template
 from datetime import datetime
+import requests
+
 
 
 app = Flask(__name__)
@@ -22,8 +24,11 @@ def hello_world():
 
   my_list = ['tikka t1X', 'tikka T3x', 'Lee Enfield', 'Mauser M96'] 
 
+  r = requests.get("https://api.nasa.gov/planetary/apod", params={'api_key':'7GNTBFqluVt7sD4enKtgNt2ZL6chJmRYsymOqBvt'})
 
-  return render_template("index.html", message=message, my_list=my_list)
+  nasa = r.json()
+
+  return render_template("index.html", message=message, my_list=my_list, nasa=nasa)
 
 # the web address is https://code-playground.onrender.com/
 
